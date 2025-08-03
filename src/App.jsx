@@ -6,7 +6,7 @@ function App() {
 	const [input, setInput] = useState("");
 
 	useEffect(() => {
-		const socket = new WebSocket("ws://localhost:8080/ws");
+		const socket = new WebSocket("wss://chat-backend-67nq.onrender.com/ws");
 		setWs(socket);
 
 		socket.onmessage = (event) => {
